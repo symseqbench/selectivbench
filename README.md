@@ -42,9 +42,34 @@ uv pip install -e ".[dev]"
 
 ### Exemplary training command
 
+```bash
+python train.py \
+  --batch_size 64 \
+  --warmup_steps 1000 \
+  --lr 0.001 \
+  --train_gap_min 0.1 \
+  --classify \
+  --base_set one_hot \
+  --save_model True \
+  --run_main \
+  --hash_save \
+  --test_seqlen_max 200 \
+  --grad_acc -1 \
+  --grammar_scale True \
+  --amb 24 \
+  --d_state 128 \
+  --feat_size 1024 \
+  --layers 8 \
+  --model transformer \
+  --seed 3 \
+  --train_gap_max 0.1 \
+  --train_noise 0 \
+  --train_seqlen_max 200
 ```
-python train.py --batch_size 64 --warmup_steps 1000 --lr 0.001 --train_gap_min 0.1 --classify --base_set one_hot --save_model True --run_main --hash_save --test_seqlen_max 200 --grad_acc -1 --grammar_scale True --amb=24 --d_state=128 --feat_size=1024 --layers=8 --model=transformer --seed=3 --train_gap_max=0.1 --train_noise=0 --train_seqlen_max=200
-```
+
+**Note:** the first run of the above command generate the sequence data in the folder `Data/SeqBench`.
+It takes about half an hour to generate the data. For debugging purposes, you could consider changing the number
+of generated sequences using the `--dataset_size` argument.
 
 ### Retrieve and Use W&B Sweeps
 
