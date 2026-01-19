@@ -1,0 +1,96 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+*.cover
+.cache/
+
+# Logs and outputs
+logs/
+log/
+*.log
+
+# Data and datasets
+data/
+Data/
+datasets/
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Model checkpoints and saves
+model_saves/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Images and visualizations
+img/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.pdf
+
+# Wandb
+wandb/
+wb_configs/
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.vector_cache
+*.swp
+*.bak
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+=1.4.0
