@@ -1,0 +1,54 @@
+project: SeqBench_OneHot
+program: train.py
+method: grid
+metric:
+  name: test_acc
+  goal: maximize
+parameters:
+  amb:
+    values: [40]
+  amb_depth:
+    values: [40]
+  train_seqlen_max:
+    values: [200]
+  train_gap_max:
+    values: [1.]
+  train_noise:
+    values: [0.2]
+  layers:
+    values: [8]
+  feat_size:
+    values: [256, 384, 512, 648, 768, 960, 1024, 1152, 1296]
+  d_state:
+    values: [128]  # d_state equals 64 for mamba (changed in training script)
+  seed:
+    values: [1,2,3,4]
+  model:
+    values: [transformer, mamba, mamba2, gla, gated_delta_net, delta_net, gated_delta_product]
+  lr:
+    values: [0.0005, 0.001, 0.002]
+  warmup_steps:
+    values: [476, 1000]
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - "--batch_size"
+  - 64
+  - "--vocab"
+  - 41
+  - "--train_gap_min"
+  - 0.1
+  - "--classify"
+  - "--base_set"
+  - one_hot
+  - "--save_model"
+  - True
+  - "--run_main"
+  - "--hash_save"
+  - "--test_seqlen_max"
+  -  200
+  - "--grad_acc"
+  - -1
+  - ${args}

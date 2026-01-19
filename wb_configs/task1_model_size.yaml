@@ -1,0 +1,55 @@
+project: SeqBench_OneHot
+program: train.py
+method: grid #random #bayes
+metric:
+  name: test_acc #loss #test_accuracy
+  goal: maximize #minimize #maximize
+parameters:
+  amb:
+    values: [40]
+  amb_depth:
+    values: [40]
+  train_seqlen_max:
+    values: [200]
+  train_gap_max:
+    values: [0.1]
+  train_noise:
+    values: [0.]
+  layers:
+    values: [8]
+  feat_size:
+    values: [256, 384, 512, 648, 960, 768, 1024, 1152, 1296]
+  d_state:
+    values: [128]
+  seed:
+    values: [1,2,3,4]
+  model:
+    values: [transformer, mamba2, mamba, gated_delta_net, delta_net, gla, gated_delta_product]
+  lr:
+    values: [0.0005, 0.001, 0.002]
+  warmup_steps:
+    values: [476, 1000]
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - "--batch_size"
+  - 64
+  - "--vocab"
+  - 41
+  - "--train_gap_min"
+  - 0.1
+  - "--classify"
+  - "--base_set"
+  - one_hot
+  - "--save_model"
+  - True
+  - "--run_main"
+  - "--hash_save"
+  - "--test_seqlen_max"
+  -  200
+  - "--grad_acc"
+  - -1
+  #- "--only_createset"
+  - ${args}

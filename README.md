@@ -1,4 +1,4 @@
-# SelectivBench: Evaluating Selectivity in Sequence Models
+# SelectivBench: Evaluating Selectivity in Linear Recurrent Models
 
 This repository contains source code and simulation scripts to perform the experiments presented in the paper titled "Dissecting Linear Recurrent Models: How Different Gating Strategies Drive Selectivity and Generalization". 2026, arXiv preprint.
 
@@ -87,7 +87,7 @@ You can run multiple agents in parallel across machines to accelerate experiment
 
 If you use SelectivBench code base or its derived tasks from SymSeqBench, please cite the following paper:
 
-```
+```bibtex
 Bouhadjar, Y., Fabre, M., Schmidt, F & Neftci, E (2026). Dissecting Linear Recurrent Models: How Different Gating Strategies Drive Selectivity and Generalization. arXiv preprint.
 ```
 
