@@ -20,10 +20,10 @@ from torch.optim.lr_scheduler import LambdaLR
 from tqdm import tqdm
 import wandb
 
-from symseqbench import create_seq_dataset_from_config
-from symseqbench.seq_dataset import PadSequence
-from symseqbench.utils import prepare_config
-from symseqbench.utils.config import Config
+from symseqbench.seqbench import create_seq_dataset_from_config
+from symseqbench.seqbench.seq_dataset import PadSequence
+from symseqbench.seqbench.utils import prepare_config
+from symseqbench.seqbench.utils.config import Config
 
 from models.ssm_models import CustomModel, RecNet
 from utils import (

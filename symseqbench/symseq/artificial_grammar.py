@@ -7,7 +7,7 @@ import logging
 import numpy as np
 from pandas import DataFrame
 
-from symseqbench.seq_utils.symbolic_sequencer import SymbolicSequencer, empty
+from symseqbench.symseq.symbolic_sequencer import SymbolicSequencer, empty
 
 logger = logging.getLogger(__name__)
 

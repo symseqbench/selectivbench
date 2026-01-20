@@ -7,8 +7,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from symseqbench.seq_utils.grammar_generation import generate_grammar
-from symseqbench.seq_utils.artificial_grammar import ArtificialGrammar
+from symseqbench.symseq.grammar_generation import generate_grammar
+from symseqbench.symseq.artificial_grammar import ArtificialGrammar
 
 logger = logging.getLogger('generator')
 
@@ -82,7 +82,7 @@ class SequenceGenerator:
         # plot transition table
         if self.plot_transition_table:
             import matplotlib.pyplot as plt
-            from sel_bench.seq_utils.markov_chain import MarkovChain
+            from symseqbench.symseq.markov_chain import MarkovChain
 
             P = self.sequencer.transition_table(correct=False,
                                                 display=True).T

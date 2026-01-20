@@ -10,11 +10,11 @@ import argparse
 
 import numpy as np
 
-from sel_bench.utils.config import Config
-from sel_bench.seq_dataset import DatasetGenerator
-from sel_bench import create_base_dataset_from_config
-from sel_bench.utils import prepare_config, get_config_hash
-from sel_bench.seq_utils.generator import SequenceGenerator
+from symseqbench.seqbench.utils.config import Config
+from symseqbench.seqbench.seq_dataset import DatasetGenerator
+from symseqbench.seqbench import create_base_dataset_from_config
+from symseqbench.seqbench.utils import prepare_config, get_config_hash
+from symseqbench.seqbench.generator import SequenceGenerator
 
 __script_name__ = os.path.basename(__file__)
 

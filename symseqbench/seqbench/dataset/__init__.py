@@ -2,8 +2,8 @@
 # Copyright (c) 2025-present, SeqBench Contributors
 
 import os
-from symseqbench.dataset.shd_ssc import SpikingDataset, SpeechCommands
-from symseqbench.dataset.synthetic import BinaryDataset
+from symseqbench.seqbench.dataset.shd_ssc import SpikingDataset, SpeechCommands
+from symseqbench.seqbench.dataset.synthetic import BinaryDataset
 
 
 def create_base_dataset_from_config(config, name):

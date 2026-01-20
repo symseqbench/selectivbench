@@ -3,7 +3,7 @@
 
 import numpy as np
 
-from symseqbench.utils.config import Config
+from symseqbench.seqbench.utils.config import Config
 
 def parse_duration(identifier):
     if identifier == 'uniform':

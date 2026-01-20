@@ -10,7 +10,7 @@ from math import log
 from gzip import compress
 from tqdm import tqdm
 
-from symseqbench.utils import metrics
+from symseqbench.symseq.utils import metrics
 
 #from fna.tools import utils
 import logging

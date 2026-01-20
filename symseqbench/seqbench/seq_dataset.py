@@ -16,16 +16,16 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset
 import numpy as np
 
-from symseqbench.utils.config import Config
-from symseqbench.utils import get_config_hash
-from symseqbench.dataset import create_base_dataset_from_config
-from symseqbench.seq_utils.generator import SequenceGenerator, GeneratorSample
+from symseqbench.seqbench.utils.config import Config
+from symseqbench.seqbench.utils import get_config_hash
+from symseqbench.seqbench.dataset import create_base_dataset_from_config
+from symseqbench.seqbench.generator import SequenceGenerator, GeneratorSample
 
 
 def create_seq_dataset_from_config(config, postfix, is_train=True, pad_index=-1):
     """
     Call this function to create a SeqDataset
-    Config should be a seq_utils.Config.
+    Config should be a symseq.Config.
     """
     base_dataset = create_base_dataset_from_config(config, postfix)
 

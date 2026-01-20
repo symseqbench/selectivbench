@@ -29,7 +29,7 @@ import numpy as np
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 
-from symseqbench.dataset.base import BaseDataset
+from symseqbench.seqbench.dataset.base import BaseDataset
 
 logger = logging.getLogger(__name__)
 

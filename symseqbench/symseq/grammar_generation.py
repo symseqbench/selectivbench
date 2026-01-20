@@ -12,7 +12,7 @@ import numpy as np
 import networkx as nx
 from sklearn.preprocessing import normalize
 
-from symseqbench.seq_utils.markov_chain import MarkovChain
+from symseqbench.symseq.markov_chain import MarkovChain
 
 
 logger = logging.getLogger('generate_grammar')

@@ -12,10 +12,10 @@ import collections
 import torch
 import numpy as np
 
-from sel_bench.utils.config import Config
-from sel_bench.utils import prepare_config
-from sel_bench.seq_dataset import PadSequence
-from sel_bench import create_seq_dataset_from_config
+from symseqbench.seqbench.utils.config import Config
+from symseqbench.seqbench.utils import prepare_config
+from symseqbench.seqbench.seq_dataset import PadSequence
+from symseqbench.seqbench import create_seq_dataset_from_config
 
 __script_name__ = os.path.basename(__file__)
 
