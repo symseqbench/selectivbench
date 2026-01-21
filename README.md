@@ -1,6 +1,6 @@
 # SelectivBench: Evaluating Selectivity in Linear Recurrent Models
 
-This repository contains source code and simulation scripts to perform the experiments presented in the paper titled "Dissecting Linear Recurrent Models: How Different Gating Strategies Drive Selectivity and Generalization". 2026, arXiv preprint.
+This repository contains source code and simulation scripts to perform the experiments presented in the paper titled "Dissecting Linear Recurrent Models: How Different Gating Strategies Drive Selectivity and Generalization" (2026), arXiv preprint [arXiv:2601.12598](https://arxiv.org/abs/2601.12598).
 
 This work introduces SelectivBench, a benchmark suite that extends [SymSeqBench](https://arxiv.org/abs/2512.24977) to evaluate small-scale language models on tasks of increasing complexity, targeting NLP-relevant capabilities such as selective information routing and generalization.
 
@@ -112,8 +112,19 @@ You can run multiple agents in parallel across machines to accelerate experiment
 
 If you use SelectivBench code base or its derived tasks from SymSeqBench, please cite the following paper:
 
+* Bouhadjar, Y., Fabre, M., Schmidt, F & Neftci, E (2026). Dissecting Linear Recurrent Models: How Different Gating Strategies Drive Selectivity and Generalization. [arXiv:2601.12598](https://arxiv.org/abs/2601.12598).
+
+
 ```bibtex
-Bouhadjar, Y., Fabre, M., Schmidt, F & Neftci, E (2026). Dissecting Linear Recurrent Models: How Different Gating Strategies Drive Selectivity and Generalization. arXiv preprint.
+@misc{Bouhadjar26_SelectivBench,
+      title={Dissecting Linear Recurrent Models: How Different Gating Strategies Drive Selectivity and Generalization}, 
+      author={Younes Bouhadjar and Maxime Fabre and Felix Schmidt and Emre Neftci},
+      year={2026},
+      eprint={2601.12598},
+      publisher={arXiv},
+      doi={10.48550/arXiv.2601.12598},
+      url={https://arxiv.org/abs/2601.12598}, 
+}
 ```
 
 ## Project Structure
